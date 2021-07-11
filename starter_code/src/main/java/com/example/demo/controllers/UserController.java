@@ -40,12 +40,20 @@ public class UserController {
 
 	@GetMapping("/id/{id}")
 	public ResponseEntity<User> findById(@PathVariable Long id) {
+		log.debug("FindById called with ID: ", id);
 		return ResponseEntity.of(userRepository.findById(id));
 	}
 	
 	@GetMapping("/{username}")
 	public ResponseEntity<User> findByUserName(@PathVariable String username) {
+		log.debug("FindByUserName called with User name: ", username);
 		User user = userRepository.findByUsername(username);
+		if (user == null) {
+			log.error("Did not find user with username: ", user.getUsername());
+		} else {
+			log.info("User found ", user.getUsername());
+		}
+
 		return user == null ? ResponseEntity.notFound().build() : ResponseEntity.ok(user);
 	}
 	
@@ -53,28 +61,25 @@ public class UserController {
 	public ResponseEntity createUser(@RequestBody CreateUserRequest createUserRequest) {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
-		log.info("User name set with ", createUserRequest.getUsername());
+		//log.info("User name set  ", user.getUsername());
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		user.setCart(cart);
 
-		// Neu eingefügt
+
 		if(createUserRequest.getPassword().length() < 7 ){
-			log.error("[CREATE USER] [Fail]  user -> " + user.getUsername() +", REASON -> invalid password");
+			log.error("[Error] [Create User]  user -> " + user.getUsername() +", REASON -> invalid password");
 
 			return ResponseEntity.badRequest().body("Password must have at least 7 characters");
 		}else if (!createUserRequest.getPassword().equals(createUserRequest.getConfirmPassword())){
-			log.error("[CREATE USER] [Fail]  user -> " + user.getUsername() +", REASON -> password mismatch");
+			log.error("[Error] [Create User] user -> " + user.getUsername() +", REASON -> password mismatch");
 			return ResponseEntity.badRequest().body("Password does not match confirm password");
 		}
 		String encodedPassword = bCryptPasswordEncoder.encode(createUserRequest.getPassword());
 		user.setPassword(encodedPassword);
-		// Neu Ende
-
 		userRepository.save(user);
-		// Neu eingefügt
-		log.info("[CREATE USER] [Success] user -> " + user.getUsername());
-		// Neu Ende
+		log.info("[Alert] [Create User] New user successfull created -> " + user.getUsername());
+
 		return ResponseEntity.ok(user);
 	}
 	

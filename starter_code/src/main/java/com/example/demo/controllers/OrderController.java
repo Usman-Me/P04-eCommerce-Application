@@ -29,30 +29,30 @@ public class OrderController {
 	
 	@Autowired
 	private OrderRepository orderRepository;
-	// Neu eingefügt +1
 	private Logger log = LoggerFactory.getLogger(OrderController.class);
 	
 	@PostMapping("/submit/{username}")
 	public ResponseEntity<UserOrder> submit(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
 		if(user == null) {
-			// Neu eingefügt +1
-			log.error("[SUBMIT ORDER] [Fail] user -> " + username +", Reason -> User not found" );
+			log.error("[Error] [SUBMIT ORDER] user -> " + username +", Reason -> User not found" );
 			return ResponseEntity.notFound().build();
 		}
 		UserOrder order = UserOrder.createFromCart(user.getCart());
 		orderRepository.save(order);
-		// Neu eingefügt +1
-		log.error("[SUBMIT ORDER] [Fail] user -> " + username +", Reason -> User not found" );
+		log.info("[Success] [SUBMIT ORDER] User -> " + username +", Order is submited!" );
 		return ResponseEntity.ok(order);
 	}
 	
 	@GetMapping("/history/{username}")
 	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
+		log.info("[Info] Getting order history for user", user.getUsername());
 		if(user == null) {
+			log.error("[Error] User -> " + username +"not found, unable to locate User");
 			return ResponseEntity.notFound().build();
 		}
+		//log.info("[Info] Order ", orderRepository.findByUser(user).size());
 		return ResponseEntity.ok(orderRepository.findByUser(user));
 	}
 }

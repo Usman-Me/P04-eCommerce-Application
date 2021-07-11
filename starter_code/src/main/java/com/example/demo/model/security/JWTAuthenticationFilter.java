@@ -4,6 +4,8 @@ import com.auth0.jwt.JWT;
 import com.example.demo.model.security.SecurityConstants;
 import com.example.demo.model.persistence.User;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
@@ -27,6 +29,8 @@ import static com.auth0.jwt.algorithms.Algorithm.HMAC512;
 
 public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilter {
 
+    private static final Logger log =  LoggerFactory.getLogger(JWTAuthenticationFilter.class);
+
     private AuthenticationManager authenticationManager;
 
     public JWTAuthenticationFilter(AuthenticationManager authenticationManager) {
@@ -39,6 +43,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
         try {
             User credentials = new ObjectMapper()
                     .readValue(req.getInputStream(), User.class);
+           // log.info("Authentication for User " , credentials.getUsername());
 
             return authenticationManager.authenticate(
                     new UsernamePasswordAuthenticationToken(
@@ -46,6 +51,7 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                             credentials.getPassword(),
                             new ArrayList<>()));
         } catch (IOException e) {
+            //log.error("[ERROR]: Authentication attempt failed: " + e.getMessage());
             throw new RuntimeException(e);
         }
     }
@@ -61,5 +67,6 @@ public class JWTAuthenticationFilter extends UsernamePasswordAuthenticationFilte
                 .withExpiresAt(new Date(System.currentTimeMillis() + SecurityConstants.EXPIRATION_TIME))
                 .sign(HMAC512(SecurityConstants.SECRET.getBytes()));
         res.addHeader(SecurityConstants.HEADER_STRING, SecurityConstants.TOKEN_PREFIX + token);
+        //log.info("[ALERT]: User authenticated, JWT has been issued: " ,  ((User) auth.getPrincipal()).getUsername());
     }
 }
