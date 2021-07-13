@@ -47,7 +47,7 @@ public class OrderController {
 	@GetMapping("/history/{username}")
 	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
 		User user = userRepository.findByUsername(username);
-		log.info("[Info] Getting order history for user", user.getUsername());
+		log.info("[Info] Getting order history for user");
 		if(user == null) {
 			log.error("[Error] User -> " + username +"not found, unable to locate User");
 			return ResponseEntity.notFound().build();

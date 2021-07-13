@@ -25,13 +25,13 @@ public class ItemController {
 	
 	@GetMapping
 	public ResponseEntity<List<Item>> getItems() {
-		log.info("[Info] Order: ", itemRepository.findAll().size());
+		log.info("[Info] GetItems Called");
 		return ResponseEntity.ok(itemRepository.findAll());
 	}
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<Item> getItemById(@PathVariable Long id) {
-		log.info("[Info] FindbyId: ", itemRepository.findById(id));
+		log.info("[Info] GetItemById Called ");
 		return ResponseEntity.of(itemRepository.findById(id));
 	}
 	

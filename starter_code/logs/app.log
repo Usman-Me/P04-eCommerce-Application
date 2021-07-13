@@ -422,3 +422,112 @@ com.auth0.jwt.exceptions.SignatureVerificationException: The Token's Signature r
 	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:630) [?:?]
 	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61) [tomcat-embed-core-9.0.45.jar:9.0.45]
 	at java.lang.Thread.run(Thread.java:831) [?:?]
+2021-07-13 09:59:11,136 INFO c.e.d.SareetaApplication [main] Starting SareetaApplication using Java 16.0.1 on CMTCL0X65758051 with PID 17432 (C:\Workplace\Projects\JavaWeb\P04-eCommerce Application\starter_code\target\classes started by UMEHMOO in C:\Workplace\Projects\JavaWeb\P04-eCommerce Application\starter_code)
+2021-07-13 09:59:11,162 DEBUG c.e.d.SareetaApplication [main] Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-07-13 09:59:11,163 INFO c.e.d.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2021-07-13 09:59:14,532 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8082"]
+2021-07-13 09:59:14,534 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2021-07-13 09:59:14,535 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-07-13 09:59:14,811 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2021-07-13 09:59:15,279 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-07-13 09:59:15,401 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-07-13 09:59:15,656 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-13 09:59:15,863 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2021-07-13 09:59:16,109 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-07-13 09:59:16,146 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-07-13 09:59:17,389 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-13 09:59:18,302 DEBUG c.e.d.m.s.JWTAuthenticationVerficationFilter [main] Filter 'JWTAuthenticationVerficationFilter' configured for use
+2021-07-13 09:59:19,506 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8082"]
+2021-07-13 09:59:19,595 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Shutdown initiated...
+2021-07-13 09:59:19,599 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Shutdown completed.
+2021-07-13 09:59:19,602 INFO o.a.c.h.Http11NioProtocol [main] Pausing ProtocolHandler ["http-nio-8082"]
+2021-07-13 09:59:19,602 INFO o.a.c.c.StandardService [main] Stopping service [Tomcat]
+2021-07-13 09:59:19,607 INFO o.a.c.h.Http11NioProtocol [main] Stopping ProtocolHandler ["http-nio-8082"]
+2021-07-13 09:59:19,608 INFO o.a.c.h.Http11NioProtocol [main] Destroying ProtocolHandler ["http-nio-8082"]
+2021-07-13 10:01:10,611 INFO c.e.d.SareetaApplication [main] Starting SareetaApplication using Java 16.0.1 on CMTCL0X65758051 with PID 6620 (C:\Workplace\Projects\JavaWeb\P04-eCommerce Application\starter_code\target\classes started by UMEHMOO in C:\Workplace\Projects\JavaWeb\P04-eCommerce Application\starter_code)
+2021-07-13 10:01:10,634 DEBUG c.e.d.SareetaApplication [main] Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-07-13 10:01:10,635 INFO c.e.d.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2021-07-13 10:01:15,831 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8083"]
+2021-07-13 10:01:15,833 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2021-07-13 10:01:15,834 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-07-13 10:01:16,103 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2021-07-13 10:01:16,504 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-07-13 10:01:16,659 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-07-13 10:01:17,061 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-13 10:01:17,333 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2021-07-13 10:01:17,609 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-07-13 10:01:17,649 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-07-13 10:01:19,408 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-13 10:01:20,462 DEBUG c.e.d.m.s.JWTAuthenticationVerficationFilter [main] Filter 'JWTAuthenticationVerficationFilter' configured for use
+2021-07-13 10:01:21,909 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8083"]
+2021-07-13 10:01:22,076 INFO c.e.d.SareetaApplication [main] Started SareetaApplication in 12.546 seconds (JVM running for 15.813)
+2021-07-13 10:01:29,016 INFO o.a.c.c.C.[.[.[/] [http-nio-8083-exec-2] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-13 10:01:29,591 INFO c.e.d.c.UserController [http-nio-8083-exec-2] [Alert] [Create User] New user successfull created -> User3
+2021-07-13 10:04:07,750 INFO c.e.d.SareetaApplication [main] Starting SareetaApplication using Java 16.0.1 on CMTCL0X65758051 with PID 2016 (C:\Workplace\Projects\JavaWeb\P04-eCommerce Application\starter_code\target\classes started by UMEHMOO in C:\Workplace\Projects\JavaWeb\P04-eCommerce Application\starter_code)
+2021-07-13 10:04:07,778 DEBUG c.e.d.SareetaApplication [main] Running with Spring Boot v2.4.5, Spring v5.3.6
+2021-07-13 10:04:07,779 INFO c.e.d.SareetaApplication [main] No active profile set, falling back to default profiles: default
+2021-07-13 10:04:10,906 INFO o.a.c.h.Http11NioProtocol [main] Initializing ProtocolHandler ["http-nio-8083"]
+2021-07-13 10:04:10,907 INFO o.a.c.c.StandardService [main] Starting service [Tomcat]
+2021-07-13 10:04:10,908 INFO o.a.c.c.StandardEngine [main] Starting Servlet engine: [Apache Tomcat/9.0.45]
+2021-07-13 10:04:11,168 INFO o.a.c.c.C.[.[.[/] [main] Initializing Spring embedded WebApplicationContext
+2021-07-13 10:04:11,559 INFO o.h.j.i.u.LogHelper [main] HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-07-13 10:04:11,683 INFO o.h.Version [main] HHH000412: Hibernate ORM core version 5.4.30.Final
+2021-07-13 10:04:11,964 INFO o.h.a.c.Version [main] HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-07-13 10:04:12,191 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Starting...
+2021-07-13 10:04:12,458 INFO c.z.h.HikariDataSource [main] HikariPool-1 - Start completed.
+2021-07-13 10:04:12,491 INFO o.h.d.Dialect [main] HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-07-13 10:04:14,159 INFO o.h.e.t.j.p.i.JtaPlatformInitiator [main] HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-07-13 10:04:15,201 DEBUG c.e.d.m.s.JWTAuthenticationVerficationFilter [main] Filter 'JWTAuthenticationVerficationFilter' configured for use
+2021-07-13 10:04:16,394 INFO o.a.c.h.Http11NioProtocol [main] Starting ProtocolHandler ["http-nio-8083"]
+2021-07-13 10:04:16,539 INFO c.e.d.SareetaApplication [main] Started SareetaApplication in 9.715 seconds (JVM running for 11.94)
+2021-07-13 10:04:30,323 INFO o.a.c.c.C.[.[.[/] [http-nio-8083-exec-1] Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-07-13 10:04:30,886 INFO c.e.d.c.UserController [http-nio-8083-exec-1] [Alert] [Create User] New user successfull created -> User1
+2021-07-13 13:10:37,754 INFO c.e.d.c.OrderController [main] [Info] Order: 
+2021-07-13 13:10:37,872 INFO c.e.d.c.OrderController [main] [Info] FindbyId: 
+2021-07-13 13:10:37,894 INFO c.e.d.c.OrderController [main] [Info] FindbyId: 
+2021-07-13 13:10:37,904 INFO c.e.d.c.OrderController [main] Items:
+2021-07-13 13:10:37,917 INFO c.e.d.c.OrderController [main] Items:
+2021-07-13 13:14:01,088 INFO c.e.d.c.OrderController [main] [Info] GetItems Called
+2021-07-13 13:14:01,136 INFO c.e.d.c.OrderController [main] [Info] GetItemById Called 
+2021-07-13 13:14:01,142 INFO c.e.d.c.OrderController [main] [Info] GetItemById Called 
+2021-07-13 13:14:01,148 INFO c.e.d.c.OrderController [main] Items:
+2021-07-13 13:14:01,158 INFO c.e.d.c.OrderController [main] Items:
+2021-07-13 16:37:59,056 INFO c.e.d.c.OrderController [main] [Info] Getting order history for user
+2021-07-13 16:37:59,119 ERROR c.e.d.c.OrderController [main] [Error] [SUBMIT ORDER] user -> InvalidUser, Reason -> User not found
+2021-07-13 16:37:59,131 INFO c.e.d.c.OrderController [main] [Success] [SUBMIT ORDER] User -> TestUserHarald, Order is submited!
+2021-07-13 16:39:03,496 INFO c.e.d.c.OrderController [main] [Info] Getting order history for user
+2021-07-13 16:39:03,539 INFO c.e.d.c.OrderController [main] [Info] Getting order history for user
+2021-07-13 16:39:03,539 ERROR c.e.d.c.OrderController [main] [Error] User -> InvalidUsernot found, unable to locate User
+2021-07-13 16:39:03,555 ERROR c.e.d.c.OrderController [main] [Error] [SUBMIT ORDER] user -> InvalidUser, Reason -> User not found
+2021-07-13 16:39:03,562 INFO c.e.d.c.OrderController [main] [Success] [SUBMIT ORDER] User -> TestUserHarald, Order is submited!
+2021-07-13 16:39:19,428 DEBUG c.e.d.c.UserController [main] FindByUserName called with User name: 
+2021-07-13 16:39:19,443 INFO c.e.d.c.UserController [main] User found 
+2021-07-13 16:39:19,469 DEBUG c.e.d.c.UserController [main] FindById called with ID: 
+2021-07-13 16:39:19,478 INFO c.e.d.c.UserController [main] [Alert] [Create User] New user successfull created -> Test
+2021-07-13 16:39:31,361 INFO c.e.d.c.OrderController [main] [Info] GetItems Called
+2021-07-13 16:39:31,416 INFO c.e.d.c.OrderController [main] [Info] GetItemById Called 
+2021-07-13 16:39:31,423 INFO c.e.d.c.OrderController [main] [Info] GetItemById Called 
+2021-07-13 16:39:31,429 INFO c.e.d.c.OrderController [main] Items:
+2021-07-13 16:39:31,442 INFO c.e.d.c.OrderController [main] Items:
+2021-07-13 16:39:42,007 INFO c.e.d.c.CartController [main] [Success] [ADD TO CART] User -> TestUserHarald
+2021-07-13 16:39:42,052 INFO c.e.d.c.CartController [main] [Success] [REMOVE FROM CART] Item removed for User -> TestUserHarald
+2021-07-13 16:39:42,056 ERROR c.e.d.c.CartController [main] [Error] [REMOVE FROM CART] User -> InvalidUser, REASON -> User not found
+2021-07-13 16:39:42,057 ERROR c.e.d.c.CartController [main] [Error] [ADD TO CART] User -> InvalidUser, REASON -> User not found
+2021-07-13 16:46:18,900 INFO c.e.d.c.CartController [main] [Success] [ADD TO CART] User -> TestUserHarald
+2021-07-13 16:46:18,941 INFO c.e.d.c.CartController [main] [Success] [REMOVE FROM CART] Item removed for User -> TestUserHarald
+2021-07-13 16:46:18,944 ERROR c.e.d.c.CartController [main] [Error] [REMOVE FROM CART] User -> InvalidUser, REASON -> User not found
+2021-07-13 16:46:18,944 ERROR c.e.d.c.CartController [main] [Error] [ADD TO CART] User -> InvalidUser, REASON -> User not found
+2021-07-13 16:46:18,953 INFO c.e.d.c.OrderController [main] [Info] GetItems Called
+2021-07-13 16:46:18,955 INFO c.e.d.c.OrderController [main] [Info] GetItemById Called 
+2021-07-13 16:46:18,958 INFO c.e.d.c.OrderController [main] [Info] GetItemById Called 
+2021-07-13 16:46:18,960 INFO c.e.d.c.OrderController [main] Items:
+2021-07-13 16:46:18,967 INFO c.e.d.c.OrderController [main] Items:
+2021-07-13 16:46:19,020 INFO c.e.d.c.OrderController [main] [Info] Getting order history for user
+2021-07-13 16:46:19,025 INFO c.e.d.c.OrderController [main] [Info] Getting order history for user
+2021-07-13 16:46:19,025 ERROR c.e.d.c.OrderController [main] [Error] User -> InvalidUsernot found, unable to locate User
+2021-07-13 16:46:19,028 ERROR c.e.d.c.OrderController [main] [Error] [SUBMIT ORDER] user -> InvalidUser, Reason -> User not found
+2021-07-13 16:46:19,031 INFO c.e.d.c.OrderController [main] [Success] [SUBMIT ORDER] User -> TestUserHarald, Order is submited!
+2021-07-13 16:46:19,059 DEBUG c.e.d.c.UserController [main] FindByUserName called with User name: 
+2021-07-13 16:46:19,060 INFO c.e.d.c.UserController [main] User found 
+2021-07-13 16:46:19,062 DEBUG c.e.d.c.UserController [main] FindById called with ID: 
+2021-07-13 16:46:19,069 INFO c.e.d.c.UserController [main] [Alert] [Create User] New user successfull created -> Test

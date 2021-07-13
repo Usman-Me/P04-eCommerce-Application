@@ -3,6 +3,7 @@ package com.example.demo.model.security;
 import org.springframework.context.annotation.Bean;
 import com.example.demo.model.security.SecurityConstants;
 import org.springframework.http.HttpMethod;
+import org.springframework.http.HttpStatus;
 import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -10,6 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.config.http.SessionCreationPolicy;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
+import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 
 import static com.example.demo.model.security.SecurityConstants.SIGN_UP_URL;
 
@@ -37,6 +39,9 @@ public class WebSecurityConfiguration extends WebSecurityConfigurerAdapter {
                 .addFilter(new JWTAuthenticationVerficationFilter(authenticationManager()))
                 // this disables session creation on Spring Security
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS);
+                // to catch up invalid credentials
+        http.exceptionHandling()
+                .authenticationEntryPoint(new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED));
     }
 
     @Override
