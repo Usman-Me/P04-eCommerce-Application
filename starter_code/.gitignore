@@ -5,7 +5,6 @@ HELP.md
 ## removed target/ in order to deploy from docker image
 
 ### STS ###
-
 .apt_generated
 .classpath
 .factorypath
@@ -15,8 +14,8 @@ HELP.md
 .sts4-cache
 
 ### IntelliJ IDEA ###
-
 .idea
+.idea_modules/
 *.iws
 *.iml
 *.ipr
